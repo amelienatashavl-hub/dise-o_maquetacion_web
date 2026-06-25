@@ -3,23 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mente Sana — Tu bienestar mental es prioridad</title>
-
-  <!-- Bootstrap 5 -->
+  <title>Mente Sana — Sobre Nosotros</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Bootstrap Icons -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
-  <!-- Fuentes -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <!-- Estilos propios -->
   <link href="styles.css" rel="stylesheet">
 </head>
 <body>
 
   <div class="ms-topband"></div>
 
+  <!-- NAVBAR -->
   <nav class="navbar navbar-expand-lg ms-nav sticky-top">
     <div class="container">
       <a class="navbar-brand" href="index.html">Mente Sana</a>
@@ -34,85 +30,73 @@
           <li class="nav-item"><a class="nav-link" href="recursos.html">Recursos</a></li>
           <li class="nav-item"><a class="nav-link" href="contactos.html">Contactos</a></li>
           <li class="nav-item"><a class="nav-link" href="servicios.html">Servicios</a></li>
-          <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
-            <a class="btn btn-ms" href="agendar.html">Agendar cita</a>
-          </li>
+          <li class="nav-item ms-lg-3 mt-2 mt-lg-0"><a class="btn btn-ms" href="agendar.html">Agendar cita</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
+  <!-- CABECERA -->
+  <div class="ms-pagehead">
+    <h2>Sobre Nosotros</h2>
+    <p>Conoce a nuestro equipo y descubre nuestra misión.</p>
+  </div>
 
-  <header class="ms-hero">
+  <!-- ¿QUIÉNES SOMOS? -->
+  <section class="section pt-0">
     <div class="container">
-      <div class="text-center mb-4">
-        <h1>Tu bienestar mental es prioridad</h1>
-        <p class="lead mt-3">Apoyo psicológico profesional, humano y accesible.<br>
-          Recupera el equilibrio y encuentra herramientas para sentirte mejor día a día.</p>
-      </div>
-
-      <div class="row g-4 mt-2 align-items-stretch">
-        <!-- Tarjeta servicios + recursos -->
-        <div class="col-lg-6">
-          <div class="ms-floatcard h-100 reveal">
-            <h5 class="mb-2"><i class="bi bi-stars text-purple me-2"></i>Servicios destacados</h5>
-            <p class="mb-3">Terapia individual · Terapia grupal · Coaching emocional · Atención online</p>
-            <h5 class="mb-2"><i class="bi bi-journal-text text-purple me-2"></i>Recursos</h5>
-            <p class="mb-0">Artículos, guías descargables y tests de bienestar para acompañar tu proceso.</p>
-          </div>
+      <div class="row align-items-center g-4 reveal">
+        <div class="col-md-5">
+          <img src="imagenes/equipo-psicologos.jpg" class="img-fluid rounded shadow-sm w-100" alt="Equipo de psicólogos">
         </div>
-        <!-- Tarjeta testimonio -->
-        <div class="col-lg-6">
-          <div class="ms-floatcard h-100 text-center reveal">
-            <div class="ms-avatar d-flex align-items-center justify-content-center mb-3">
-              <i class="bi bi-person-fill" style="font-size:3rem;color:#fff;"></i>
-            </div>
-            <h6 class="fw-bold mb-1">Testimonio</h6>
-            <p class="fst-italic mb-2">"Encontré en Mente Sana un espacio seguro para trabajar mis emociones.
-              El acompañamiento me permitió recuperar herramientas para mi día a día."</p>
-            <div class="ms-stars mb-3">★ ★ ★ ★ ★</div>
-            <a href="agendar.html" class="btn btn-ms">Agendar cita</a>
-          </div>
+        <div class="col-md-7">
+          <h3 class="fw-bold mb-3">¿Quiénes somos?</h3>
+          <p>Somos un equipo de profesionales comprometidos con la salud mental
+            y el bienestar emocional de las personas.</p>
+          <p class="mb-0">Nuestra práctica se basa en el respeto, la confidencialidad
+            y la búsqueda de resultados significativos.</p>
         </div>
       </div>
     </div>
-  </header>
+  </section>
 
+  <!-- MISIÓN Y VISIÓN -->
   <section class="section bg-lav">
     <div class="container">
-      <div class="row g-4 text-center">
-        <div class="col-6 col-md-3 reveal">
-          <i class="bi bi-shield-heart text-purple" style="font-size:2.4rem;"></i>
-          <h6 class="mt-2 fw-bold">Confidencialidad</h6>
-          <p class="text-muted small mb-0">Un espacio seguro y privado.</p>
+      <div class="row g-5">
+        <div class="col-md-6">
+          <div class="d-flex align-items-start gap-4 reveal">
+            <div class="ms-feature-icon"><i class="bi bi-bullseye"></i></div>
+            <div>
+              <h4 class="fw-bold">Misión</h4>
+              <p class="mb-0">Brindar apoyo psicológico accesible, ético y de calidad
+                para mejorar la vida de nuestros pacientes.</p>
+            </div>
+          </div>
         </div>
-        <div class="col-6 col-md-3 reveal">
-          <i class="bi bi-people text-purple" style="font-size:2.4rem;"></i>
-          <h6 class="mt-2 fw-bold">Equipo humano</h6>
-          <p class="text-muted small mb-0">Profesionales comprometidos.</p>
-        </div>
-        <div class="col-6 col-md-3 reveal">
-          <i class="bi bi-laptop text-purple" style="font-size:2.4rem;"></i>
-          <h6 class="mt-2 fw-bold">Atención online</h6>
-          <p class="text-muted small mb-0">Desde donde estés.</p>
-        </div>
-        <div class="col-6 col-md-3 reveal">
-          <i class="bi bi-graph-up-arrow text-purple" style="font-size:2.4rem;"></i>
-          <h6 class="mt-2 fw-bold">Resultados</h6>
-          <p class="text-muted small mb-0">Enfoque práctico y real.</p>
+        <div class="col-md-6">
+          <div class="d-flex align-items-start gap-4 reveal">
+            <div class="ms-feature-icon"><i class="bi bi-eye"></i></div>
+            <div>
+              <h4 class="fw-bold">Visión</h4>
+              <p class="mb-0">Ser referentes en salud mental, promoviendo una cultura de
+                bienestar y equilibrio emocional en la comunidad.</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- CTA -->
   <section class="section text-center">
     <div class="container">
-      <h2 class="fw-bold mb-2 reveal">¿Listo para empezar?</h2>
-      <p class="text-muted mb-4 reveal">Da el primer paso hacia tu bienestar emocional.</p>
-      <a href="agendar.html" class="btn btn-ms btn-lg reveal">Agendar cita</a>
+      <h2 class="fw-bold mb-3 reveal">Conoce más de lo que hacemos</h2>
+      <a href="servicios.html" class="btn btn-ms btn-lg reveal">Ver servicios</a>
     </div>
   </section>
 
+  <!-- FOOTER -->
   <footer class="ms-footer">
     <div class="container">
       <div class="row gy-4">
