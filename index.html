@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <br>
   <title>Mente Sana — Tu bienestar mental es prioridad</title>
 
   <!-- Bootstrap 5 -->
@@ -16,6 +15,70 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <!-- Estilos propios -->
   <link href="styles.css" rel="stylesheet">
+
+  <style>
+    /* Corrección específica para GitHub Pages: evita que las imágenes del bloque izquierdo del index se agranden */
+    .ms-hero-cards .ms-home-card .ms-home-highlights {
+      display: grid !important;
+      gap: 12px !important;
+    }
+
+    .ms-hero-cards .ms-home-card .ms-home-highlight {
+      display: grid !important;
+      grid-template-columns: 96px minmax(0, 1fr) !important;
+      align-items: center !important;
+      gap: 14px !important;
+      padding: 10px !important;
+      border-radius: 18px !important;
+      background: rgba(255,255,255,.62) !important;
+      overflow: hidden !important;
+    }
+
+    .ms-hero-cards .ms-home-card .ms-home-highlight img {
+      width: 96px !important;
+      min-width: 96px !important;
+      max-width: 96px !important;
+      height: 72px !important;
+      min-height: 72px !important;
+      max-height: 72px !important;
+      object-fit: cover !important;
+      display: block !important;
+      border-radius: 14px !important;
+    }
+
+    .ms-hero-cards .ms-home-card .ms-home-highlight h6 {
+      margin: 0 0 3px 0 !important;
+      font-size: .98rem !important;
+      line-height: 1.15 !important;
+    }
+
+    .ms-hero-cards .ms-home-card .ms-home-highlight p {
+      margin: 0 !important;
+      font-size: .88rem !important;
+      line-height: 1.25 !important;
+    }
+
+    .ms-hero-cards .ms-home-card {
+      min-height: 100% !important;
+      overflow: hidden !important;
+    }
+
+    @media (max-width: 575px) {
+      .ms-hero-cards .ms-home-card .ms-home-highlight {
+        grid-template-columns: 78px minmax(0, 1fr) !important;
+      }
+
+      .ms-hero-cards .ms-home-card .ms-home-highlight img {
+        width: 78px !important;
+        min-width: 78px !important;
+        max-width: 78px !important;
+        height: 62px !important;
+        min-height: 62px !important;
+        max-height: 62px !important;
+      }
+    }
+  </style>
+
 </head>
 <body>
 
@@ -47,13 +110,12 @@
   <header class="ms-hero">
     <div class="container">
       <div class="text-center mb-4">
-        <br>
         <h1>Tu bienestar mental es prioridad</h1>
         <p class="lead mt-3">Apoyo psicológico profesional, humano y accesible.<br>
           Recupera el equilibrio y encuentra herramientas para sentirte mejor día a día.</p>
       </div>
 
-      <div class="row g-4 mt-2 align-items-stretch">
+      <div class="row g-4 mt-2 align-items-stretch ms-hero-cards">
         <!-- Tarjeta servicios + recursos mejorada -->
         <div class="col-lg-6">
           <div class="ms-floatcard ms-home-card h-100 reveal">

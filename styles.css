@@ -491,3 +491,41 @@ body.ms-lilac-page .ms-card .p-4 { padding: 2rem 1.5rem !important; }
     height: 135px;
   }
 }
+
+
+/* ===== Fix final GitHub Pages: tamaño estable en imágenes del index ===== */
+.ms-hero-cards .ms-home-card .ms-home-highlights {
+  display: grid !important;
+  gap: 12px !important;
+}
+.ms-hero-cards .ms-home-card .ms-home-highlight {
+  display: grid !important;
+  grid-template-columns: 96px minmax(0, 1fr) !important;
+  align-items: center !important;
+  gap: 14px !important;
+  padding: 10px !important;
+  overflow: hidden !important;
+}
+.ms-hero-cards .ms-home-card .ms-home-highlight img {
+  width: 96px !important;
+  min-width: 96px !important;
+  max-width: 96px !important;
+  height: 72px !important;
+  min-height: 72px !important;
+  max-height: 72px !important;
+  object-fit: cover !important;
+  display: block !important;
+}
+@media (max-width: 575px) {
+  .ms-hero-cards .ms-home-card .ms-home-highlight {
+    grid-template-columns: 78px minmax(0, 1fr) !important;
+  }
+  .ms-hero-cards .ms-home-card .ms-home-highlight img {
+    width: 78px !important;
+    min-width: 78px !important;
+    max-width: 78px !important;
+    height: 62px !important;
+    min-height: 62px !important;
+    max-height: 62px !important;
+  }
+}
