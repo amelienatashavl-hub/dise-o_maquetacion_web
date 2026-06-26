@@ -113,28 +113,30 @@ h1, h2, h3, h4, h5, .display-title, .navbar-brand {
   display: flex;
   align-items: center;
   background:
-    linear-gradient(180deg, rgba(255,255,255,.28), rgba(255,255,255,.18)),
+    linear-gradient(135deg, rgba(164, 120, 233, .88) 0%, rgba(194, 159, 237, .80) 42%, rgba(241, 206, 224, .72) 100%),
     url("imagenes/home-bg.jpg") center/cover no-repeat;
   overflow: hidden;
 }
 .ms-hero::after {
   content:"";
   position:absolute; inset:0;
-  background: radial-gradient(circle at 20% 90%, rgba(255,255,255,.25), transparent 40%),
-              radial-gradient(circle at 80% 20%, rgba(255,255,255,.20), transparent 45%);
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.10)),
+    radial-gradient(circle at 18% 88%, rgba(255,255,255,.18), transparent 38%),
+    radial-gradient(circle at 82% 18%, rgba(255,255,255,.14), transparent 42%);
 }
 .ms-hero .container { position: relative; z-index: 2; }
 .ms-hero h1 {
   font-weight: 800;
   font-size: clamp(2rem, 5vw, 3.4rem);
-  color: #1c1c2b;
-  text-shadow: 0 2px 12px rgba(255,255,255,.4);
+  color: #ffffff;
+  text-shadow: 0 3px 14px rgba(73, 34, 110, .28);
 }
 .ms-hero .lead {
   color: #ffffff;
   font-style: italic;
   font-size: clamp(1rem, 2.2vw, 1.5rem);
-  text-shadow: 0 2px 10px rgba(0,0,0,.25);
+  text-shadow: 0 2px 10px rgba(73, 34, 110, .22);
 }
 
 /* Tarjetas flotantes del hero */
@@ -330,3 +332,162 @@ table.ms-cal td.selected { background: var(--ms-purple); color:#fff; font-weight
 .ms-appoint{min-height:650px;}
 .confirm-img{max-width:170px;width:70%;height:auto;display:block;margin:0 auto 1rem;}
 .card-img-top{height:220px;object-fit:cover;width:100%;}
+
+/* ===== Revisión visual final basada en las capturas de ejemplo ===== */
+:root { --ms-page-lilac: #ECEAF4; }
+body.ms-lilac-page { background: var(--ms-page-lilac); }
+body.ms-lilac-page .ms-pagehead,
+body.ms-lilac-page .section,
+body.ms-lilac-page .section.pt-0,
+body.ms-lilac-page .bg-lav {
+  background: var(--ms-page-lilac) !important;
+}
+body.ms-lilac-page .ms-pagehead {
+  padding-top: 3.15rem;
+  padding-bottom: 1.35rem;
+}
+body.ms-lilac-page .section { padding-top: 2.55rem; padding-bottom: 2.9rem; }
+body.ms-lilac-page .section.pt-0 { padding-top: .35rem !important; }
+body.ms-lilac-page .ms-card { background: #fff; }
+body.ms-lilac-page .ms-form-card { background: rgba(255,255,255,.72); }
+
+/* Evita que el footer aparezca pegado en páginas con poco contenido */
+body.ms-lilac-page .page-fill { min-height: calc(100vh - 260px); }
+
+/* Nosotros: imágenes iguales a las del PDF, bien encuadradas */
+.about-main-img {
+  height: 250px;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 4px;
+}
+.ms-feature-photo {
+  width: 170px;
+  height: 105px;
+  object-fit: cover;
+  object-position: center;
+  background: #fff;
+}
+
+/* Cards de productos y recursos como las capturas */
+body.ms-lilac-page .card-img-top {
+  height: 275px;
+  object-fit: cover;
+  object-position: center;
+}
+body.ms-lilac-page .ms-card {
+  border-radius: 18px;
+  overflow: hidden;
+}
+body.ms-lilac-page .ms-card .p-4 { padding: 2rem 1.5rem !important; }
+
+/* Recursos: buscador ancho con botón morado redondeado */
+.recursos-search .form-control { min-height: 60px; border-radius: 14px 0 0 14px; }
+.recursos-search .btn { min-width: 82px; border-radius: 0 28px 28px 0; }
+
+/* Home más cercano a la maqueta */
+.ms-hero { min-height: 74vh; }
+.ms-floatcard { min-height: 225px; }
+.ms-hero .row { margin-top: 3.2rem !important; }
+
+/* Contactos: imagen de ubicación con la altura de la referencia */
+.contact-map-img {
+  height: 370px;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Servicios: tarjetas similares al PDF y sin que el footer suba */
+.ms-services { min-height: calc(100vh - 86px); }
+.ms-service-card img { height: 210px; object-fit: cover; object-position: center; }
+
+@media (max-width: 991px) {
+  body.ms-lilac-page .card-img-top { height: 220px; }
+  .about-main-img { height: 220px; }
+  .contact-map-img { height: 280px; }
+}
+
+/* ---------- Tarjeta principal de Inicio mejorada ---------- */
+.ms-home-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.ms-home-icon {
+  width: 46px;
+  height: 46px;
+  flex: 0 0 46px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 1.45rem;
+  background: linear-gradient(135deg, #9D4EDD, #7B2CBF);
+  box-shadow: 0 8px 20px rgba(123, 44, 191, .22);
+}
+
+.ms-home-highlights {
+  display: grid;
+  gap: .85rem;
+}
+
+.ms-home-highlight {
+  display: grid;
+  grid-template-columns: 92px 1fr;
+  gap: .9rem;
+  align-items: center;
+  background: rgba(255,255,255,.60);
+  border: 1px solid rgba(123, 44, 191, .08);
+  border-radius: 18px;
+  padding: .75rem;
+}
+
+.ms-home-highlight img {
+  width: 92px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 14px;
+  box-shadow: 0 6px 16px rgba(94, 27, 158, .12);
+}
+
+.ms-home-highlight h6 {
+  font-weight: 700;
+  margin-bottom: .2rem;
+  color: var(--ms-text);
+}
+
+.ms-home-highlight p {
+  margin: 0;
+  color: #4b4f64;
+  font-size: .93rem;
+  line-height: 1.35;
+}
+
+.ms-home-card-footer {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: .9rem;
+  flex-wrap: wrap;
+  padding-top: .25rem;
+}
+
+.ms-home-card-footer span {
+  color: #4b4f64;
+  font-weight: 600;
+  font-size: .95rem;
+}
+
+@media (max-width: 575px) {
+  .ms-home-highlight {
+    grid-template-columns: 1fr;
+  }
+  .ms-home-highlight img {
+    width: 100%;
+    height: 135px;
+  }
+}
